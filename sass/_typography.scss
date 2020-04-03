@@ -36,7 +36,7 @@
 }
 
 .btn {
-    background-color: $color-primary;
+    background-color: $color-button;
     color: #fff;
     border: none;
     border-radius: 0;
@@ -48,7 +48,7 @@
     transition: all .2s;
 
     &:hover {
-        background-color: $color-primary-dark;
+        background-color: $color-button-dark;
     }
 }
 

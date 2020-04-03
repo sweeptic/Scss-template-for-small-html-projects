@@ -44,8 +44,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (minmax(20vh, 1fr))[5];
-      grid-template-rows: repeat(5, minmax(20vh, 1fr));
+  -ms-grid-rows: 20vh 20vh 20vh 20vh min-content;
+      grid-template-rows: 20vh 20vh 20vh 20vh -webkit-min-content;
+      grid-template-rows: 20vh 20vh 20vh 20vh min-content;
   -ms-grid-columns: [full-start] minmax(min-content, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[10] [center-end] minmax(min-content, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(-webkit-min-content, 1fr) [center-start] repeat(10, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(-webkit-min-content, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end];
@@ -95,7 +96,7 @@ body {
 }
 
 .btn {
-  background-color: #3498db;
+  background-color: #e84594;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -109,7 +110,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #2980b9;
+  background-color: #de1b7a;
 }
 
 .mb-sm {
@@ -140,6 +141,18 @@ body {
   grid-column: center-start / center-end;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.section-1__btn {
+  justify-self: flex-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 10px;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .section-2 {
@@ -160,5 +173,46 @@ body {
   background-color: #2980b9;
   grid-column: full-start / full-end;
   padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link:link, .nav__link:visited {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  display: block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav__link:hover, .nav__link:active {
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #bdbdbd;
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 70%;
 }
 /*# sourceMappingURL=main.css.map */
